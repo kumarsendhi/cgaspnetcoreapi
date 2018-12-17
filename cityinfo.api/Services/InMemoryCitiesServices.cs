@@ -27,7 +27,7 @@ namespace cityinfo.api.Services
                 },
                   new CityDTO
                 {
-                    ID=1,
+                    ID=3,
                     Name="Tiruchendur",
                     Description="Soul City"
                 },
@@ -40,6 +40,11 @@ namespace cityinfo.api.Services
         public List<CityDTO> GetCities()
         {
             return Cities;
+        }
+
+        public CityDTO GetCity(int id)
+        {
+            return Cities.FirstOrDefault(i => i.ID == id);
         }
     }
 }

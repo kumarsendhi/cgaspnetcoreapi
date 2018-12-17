@@ -9,5 +9,6 @@ namespace cityinfo.api.Services
     public interface ICititesServices
     {
          List<CityDTO> GetCities();
+        CityDTO GetCity(int id);
     }
 }

@@ -22,5 +22,13 @@ namespace cityinfo.api.Controllers
         {
             return new JsonResult(_cityServices.GetCities());
         }
+
+        [Route("GetCity/{id}")]
+        [HttpGet]
+        public JsonResult GetCity(int id)
+        {
+            return new JsonResult(_cityServices.GetCity(id));
+        }
+
     }
 }
